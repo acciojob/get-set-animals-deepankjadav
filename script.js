@@ -8,36 +8,28 @@ class Animal {
     }
 
     makeSound() {
-        // Default behavior for animals if no specific sound is implemented
+        // Default sound for generic animals
         return `The ${this._species} makes a sound`;
     }
 }
 
 class Dog extends Animal {
     constructor() {
-        super("Golden Retriever"); // Assigning a specific breed
+        super("Dog");
     }
 
     makeSound() {
-        return "woof"; // Dog-specific sound
-    }
-
-    bark() {
-        console.log("woof");
+        return "woof"; // Match test expectations
     }
 }
 
 class Cat extends Animal {
     constructor() {
-        super("Siamese"); // Assigning a specific breed
+        super("Cat");
     }
 
     makeSound() {
-        return "purr"; // Cat-specific sound
-    }
-
-    purr() {
-        console.log("purr");
+        return "purr"; // Match test expectations
     }
 }
 
