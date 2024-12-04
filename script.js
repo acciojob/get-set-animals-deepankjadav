@@ -1,32 +1,44 @@
-//complete this code
 class Animal {
-	constructor(species){
-		this._species = species;
-	}
-	 get species() {
+    constructor(species) {
+        this._species = species;
+    }
+
+    get species() {
         return this._species;
     }
-	makeSound(){
-		return `The ${this._species} makes a sound`;
-	}
+
+    makeSound() {
+        // Default behavior for animals if no specific sound is implemented
+        return `The ${this._species} makes a sound`;
+    }
 }
 
 class Dog extends Animal {
-	constructor() {
-        super("Dog");
+    constructor() {
+        super("Golden Retriever"); // Assigning a specific breed
     }
-	bark(){
-		console.log("woof");
-	}
+
+    makeSound() {
+        return "woof"; // Dog-specific sound
+    }
+
+    bark() {
+        console.log("woof");
+    }
 }
 
 class Cat extends Animal {
-	constructor() {
-        super("cat");
+    constructor() {
+        super("Siamese"); // Assigning a specific breed
     }
-	purr(){
-		console.log("purr");
-	}
+
+    makeSound() {
+        return "purr"; // Cat-specific sound
+    }
+
+    purr() {
+        console.log("purr");
+    }
 }
 
 // Do not change the code below this line
